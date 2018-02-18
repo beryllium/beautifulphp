@@ -1,1 +1,5 @@
 source/components
+vendor/
+output_prod/
+output_dev/
+publish.sh
