@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>{% block full_title %}{{ site.title }}{% block subtitle %} - Coming Soon{% endblock subtitle %}{%endblock full_title%}</title>
+        <title>{% block full_title %}{{ site.title }}{% block subtitle %} - {{ page.subtitle|default('Coming Soon') }}{% endblock subtitle %}{%endblock full_title%}</title>
         <link rel="stylesheet" href="/components/revealjs/css/reveal.css">
         <link rel="stylesheet" href="/components/revealjs/css/theme/league.css">
         <link rel="stylesheet" href="/components/revealjs/lib/css/zenburn.css">
