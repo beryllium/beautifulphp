@@ -13,9 +13,10 @@
         "components/bootstrap": "~2.3.1",
         "components/jquery": "~1.9.1",
         "components/highlightjs": "~7.3.0",
-        "sculpin/sculpin": "^2.1@dev",
+        "sculpin/sculpin": "^2.1.0",
+        "beryllium/icelus": "^1.0",
         "dflydev/embedded-composer": "^1.0@dev",
-        "beryllium/icelus": "^1.0"
+        "components/revealjs": "dev-master"
     },
     "config": {
         "component-dir": "source/components"

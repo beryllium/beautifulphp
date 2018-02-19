@@ -1,33 +1,37 @@
 <html>
     <head>
         <title>{% block full_title %}{{ site.title }}{% block subtitle %} - Coming Soon{% endblock subtitle %}{%endblock full_title%}</title>
+        <link rel="stylesheet" href="/components/revealjs/css/reveal.css">
+        <link rel="stylesheet" href="/components/revealjs/css/theme/league.css">
+        <link rel="stylesheet" href="/components/revealjs/lib/css/zenburn.css">
+        <style>
+            .reveal section img.logo { background:none; border:none; box-shadow:none; }
+        </style>
     </head>
-    <style>
-        body {
-            text-align: center;
-            padding-top: 15em;
-            font-family: Helvetica, Arial;
-        }
-        footer {
-            padding-top: 10em;
-        }
-        a, a:visited, a:hover {
-            color: orange;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-    </style>
     <body>
-        {% block content %}
-        {% endblock content %}
-        <footer>
-        <p>
-            a <a href="http://whateverthing.com">whateverthing.com</a> project
-        </p>
-        </footer>
+        <div class="reveal">
+            <div class="slides">
+                {% block content '' %}
+            </div>
+        </div>
+
+        {# find a way to float this above the bottom, unobtrusively. #}
+        <!--<footer>-->
+        <!--<p>-->
+            <!--a <a href="http://whateverthing.com">whateverthing.com</a> project-->
+        <!--</p>-->
+        <!--</footer>-->
 
 <a href="https://github.com/beryllium/beautifulphp"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
         {{ site.analytics|default('')|raw }}
+        <script src="/components/revealjs/js/reveal.js"></script>
+        <script src="/components/revealjs/plugin/highlight/highlight.js"></script>
+        <!--<script src="/components/revealjs/plugin/markdown/marked.js"></script>-->
+        <!--<script src="/components/revealjs/plugin/markdown/markdown.js"></script>-->
+        <script>
+            Reveal.initialize({
+                controlsTutorial: true
+            });
+        </script>
     </body>
 </html>
