@@ -32,15 +32,18 @@ layout: default
 
     <section>
 
-        <p>The most common criticism of PHP is the seemingly-random "needle"/"haystack" parameter order.</p>
+        <p>The most common criticisms of PHP over the years have been the seemingly-unending security problems ... and the random "needle"/"haystack" parameter order.</p>
 
-        <p>But a much more valid concern that arose from messy evolution is that PHP lacked a representation of <strong>Requests</strong> and <strong>Responses</strong>.</p>
+        <p>Another valid concern that arose from messy evolution is that PHP lacked a representation of <strong>Requests</strong> and <strong>Responses</strong>.</p>
 
     </section>
 
     <section>
 
-        <p>Because, for PHP, <strong>each execution</strong> of the script is a Request - and the script's output is the Response.</p>
+        <p>For PHP, <strong>each execution</strong> of the script is a Request - and the script's output is the Response.</p>
+
+        <p>This has led to some sloppy practices on the part of developers.</p>
+
     </section>
 
     <section>
@@ -229,9 +232,8 @@ layout: default
     <h2>Non-Standard Request Processing</h2>
 
     <section>
-        <p>Not having a built-in abstraction for Request/Response led to some creative uses of the superglobals that exposed request values.</p>
-        <p>And cookies.</p>
-        <p>And sessions.</p>
+        <p>Exposing request values via special "Super-Global" variables led to some issues that could have been solved by a core Request/Response abstraction.</p>
+        <p>It is a constant source of Spooky Action at a Distance and other side effects.</p>
     </section>
 
 </section>
