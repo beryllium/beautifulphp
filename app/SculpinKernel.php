@@ -4,9 +4,7 @@ class SculpinKernel extends \Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKer
 {
     protected function getAdditionalSculpinBundles(): array
     {
-        return array(
-            'Beryllium\Icelus\IcelusBundle',
-        );
+        return [];
     }
 }
 
