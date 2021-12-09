@@ -11,5 +11,10 @@
     ],
     "require": {
         "sculpin/sculpin": "^3.1"
+    },
+    "scripts": {
+        "publish": [
+            "vendor/bin/sculpin generate --env=prod --output-dir=docs"
+        ]
     }
 }
